@@ -1,0 +1,40 @@
+.blog {
+    display: flex;
+    position: relative;
+    box-shadow: 0 0 5px 1px lightgray;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+
+    .image-area {
+        aspect-ratio: 1 / 0.65;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        margin-top: 10px;
+
+        p.header {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        p.text {
+            margin-top: 5px;
+        }
+    }
+
+    p.date {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        color: gray;
+        font-style: italic;
+    }
+}

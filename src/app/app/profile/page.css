@@ -1,0 +1,72 @@
+.profile-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .image-area {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+
+        .image-placeholder {
+          width: 100%;
+          height: 100%;
+          background-color: slateblue;
+          color: white;
+          font-size: 4rem;
+          display: grid;
+          place-content: center;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    form {
+        width: 100%;
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        input[type='file'] {
+            display: none;
+        }
+  
+        .field {
+          display: flex;
+          align-items: center;
+          background-color: rgb(233, 233, 233);
+          padding: 8px;
+          border-radius: 7px;
+          border: 2px solid transparent;
+  
+          &:focus-within {
+            border: 2px solid var(--primary-color);
+          }
+  
+          input {
+            padding: 2px;
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+            outline: none;
+          }
+        }
+      }
+}
+
+@media screen and (max-width: 900px) {
+  .profile-page form {
+    padding: 0 2rem;
+  }
+}

@@ -1,0 +1,77 @@
+.blog-page {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2.5rem;
+    align-items: center;
+
+    & > * {
+        width: 100%;
+    }
+
+    .blog {
+        box-shadow: none;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        p.title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        p.author {
+            font-size: 1.2rem;
+            color: gray;
+        }
+        p.date {
+            font-size: 1rem;
+        }
+    }
+
+    .btn-area {
+        margin-top: 10px;
+        display: flex;
+        gap: 12px;
+
+        .edit {
+            background-color: green;
+        }
+        .delete {
+            background-color: red;
+        }
+    }
+
+    .image-area {
+        aspect-ratio: 1 / 0.7;
+        margin-top: 1.2rem;
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .blog-page {
+        .content {
+            font-size: 1rem;
+        }
+
+        
+        .btn-area {
+            button {
+                padding: 7px;
+            }
+        }
+    }
+}
