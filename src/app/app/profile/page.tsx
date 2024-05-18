@@ -31,9 +31,11 @@ const Page = () => {
   }, []);
 
   const handleImageChange = (e: ChangeEvent) => {
-    const newUrl = URL.createObjectURL(fileRef.current?.files[0]);
-
-    setUrl(newUrl);
+    const files = fileRef.current?.files ?? undefined
+    if (files) {
+      const newUrl = URL.createObjectURL(files[0]);
+      setUrl(newUrl);
+    }
   };
   return (
     <div className="profile-page">
@@ -63,7 +65,6 @@ const Page = () => {
         <div className="field">
           <input
             name="password"
-            defaultValue={user?.hashPassword}
             type="password"
             placeholder="Password"
           />

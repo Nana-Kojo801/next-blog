@@ -35,8 +35,6 @@ export const { handlers, signIn, auth, signOut, unstable_update } = NextAuth({
             if (user) {
                 return {
                     ...token,
-                    id: user.id,
-                    hashPassword: user.hashPassword
                 }
             }
             return token
@@ -47,8 +45,6 @@ export const { handlers, signIn, auth, signOut, unstable_update } = NextAuth({
                 ...session,
                 user: {
                     ...session.user,
-                    id: token.id,
-                    hashPassword: token.hashPassword
                 }
             }
         }
